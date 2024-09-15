@@ -662,14 +662,14 @@ func wsDepthServe(symbol string, levels string, rate *time.Duration, handler WsD
 
 // WsUserDataEvent define user data event
 type WsUserDataEvent struct {
-	Event              UserDataEventType `json:"e"`
-	Time               int64             `json:"E"`
-	Alias              string            `json:"i"`
-	CrossWalletBalance string            `json:"cw"`
-	//MarginCallPositions []WsPosition       `json:"p"`
-	TransactionTime  int64              `json:"T"`
-	AccountUpdate    WsAccountUpdate    `json:"a"`
-	OrderTradeUpdate WsOrderTradeUpdate `json:"o"`
+	Event               UserDataEventType  `json:"e"`
+	Time                int64              `json:"E"`
+	Alias               string             `json:"i"`
+	CrossWalletBalance  string             `json:"cw"`
+	MarginCallPositions []WsPosition       `json:"p"`
+	TransactionTime     int64              `json:"T"`
+	AccountUpdate       WsAccountUpdate    `json:"a"`
+	OrderTradeUpdate    WsOrderTradeUpdate `json:"o"`
 }
 
 func (e *WsUserDataEvent) UnmarshalJSON(data []byte) error {
