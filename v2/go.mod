@@ -2,6 +2,10 @@ module github.com/adshao/go-binance/v2
 
 go 1.18
 
+replace (
+	github.com/adshao/go-binance/v2 v2.0.0 => .
+)
+
 require (
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/gorilla/websocket v1.5.0
